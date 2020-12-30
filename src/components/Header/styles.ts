@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
   background: #c72828;
@@ -24,6 +25,12 @@ export const Container = styled.div`
           display: flex;
           flex-direction: row;
           align-items: center;
+
+          transition: background-color 0.2s;
+
+          &:hover {
+            background: ${shade(0.2, '#39b100')};
+          }
 
           .text {
             padding: 16px 24px;
